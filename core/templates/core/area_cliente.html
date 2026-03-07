@@ -1,0 +1,22 @@
+<!-- templates/core/area_cliente.html -->
+<h2>Min accounts - Ennarq</h2>
+<p>Bem-vindo, {{ user.username }}!</p>
+
+<h3>Meus Orçamentos</h3>
+<ul>
+    {% for orcamento in orcamentos %}
+        <li>{{ orcamento.titulo }} - <strong>{{ orcamento.status }}</strong></li>
+    {% empty %}
+        <li>Você ainda não tem budget requests.</li>
+     cinema {% endfor %}
+</ul>
+
+<h3>Meus Projetos em Andamento</h3>
+<ul>
+    {% for projeto in projetos %}
+        <li>{{ projeto.nome_projeto }}: {{ projeto.progresso }}% concluído</li>
+    {% empty %}
+        <li>Nenhum projeto em andamento.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'logout' %}">Sair</a>

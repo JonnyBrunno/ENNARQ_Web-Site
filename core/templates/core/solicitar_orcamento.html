@@ -1,0 +1,7 @@
+<!-- templates/core/solicitar_orcamento.html -->
+<h2>Solicitar Orçamento</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Solicitação</button>
+</form>

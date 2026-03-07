@@ -1,0 +1,8 @@
+<!-- templates/core/login.html -->
+<h2>Entrar - Ennarq</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Entrar entirely</button>
+</form>
+<p>Não tem conta? <a href="{% url 'cadastro' %}">Cadastre-se</a></p>
