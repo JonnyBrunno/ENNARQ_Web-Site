@@ -1039,3 +1039,103 @@ textarea.form-input {
 .section {
   animation: fadeIn 0.6s ease;
 }
+/* Estilos para Formulários e Cards */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: var(--bg-dark);
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.auth-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.auth-card form p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.auth-card input, .auth-card textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.auth-card input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.auth-card .btn-submit {
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Estilos para o Perfil do Usuário no Header */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.profile-link:hover {
+    color: var(--primary-color);
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    border: 2px solid var(--primary-color);
+}
+
+.btn-logout {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+}

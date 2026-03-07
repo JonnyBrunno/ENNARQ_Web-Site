@@ -1,7 +1,24 @@
-<!-- templates/core/solicitar_orcamento.html -->
-<h2>Solicitar Orçamento</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Enviar Solicitação</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitar Orçamento | ENNARQ</title>
+    <link rel="stylesheet" href="{% static 'style_ENNARQ.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Novo Orçamento</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn-primary btn-submit">Enviar Solicitação</button>
+            </form>
+            <div class="auth-footer">
+                <p><a href="{% url 'area_cliente' %}">Voltar para Minha Conta</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

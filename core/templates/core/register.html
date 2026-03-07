@@ -1,8 +1,25 @@
-<!-- templates/core/register.html -->
-<h2>Criar Conta - Ennarq</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Cadastrar</button>
-</form>
-<p>Já tem uma conta? <a href="{% url 'login' %}">Faça login aqui</a></p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro | ENNARQ</title>
+    <link rel="stylesheet" href="{% static 'style_ENNARQ.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Criar Conta</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn-primary btn-submit">Cadastrar</button>
+            </form>
+            <div class="auth-footer">
+                <p>Já possui conta? <a href="{% url 'login' %}">Fazer Login</a></p>
+                <p><a href="{% url 'index' %}">Voltar para Home</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

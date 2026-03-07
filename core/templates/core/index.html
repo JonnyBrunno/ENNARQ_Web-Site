@@ -63,7 +63,7 @@
       <a href="#sobre" class="nav-link crane-trigger">Sobre</a>
       <a href="#servicos" class="nav-link crane-trigger">Serviços</a>
       <a href="#contato" class="nav-link crane-trigger">Contato</a>
-      <a href="templates/auth/register.html" class="btn btn-primary crane-trigger">Cadastrar</a>
+      <a href="{% url 'cadastro' %}" class="btn btn-primary crane-trigger">Cadastrar</a>
     </div>
   </div>
 </nav>
@@ -233,7 +233,9 @@
   <div class="cta-container">
     <h2 class="cta-title">Pronto para começar seu projeto?</h2>
     <p class="cta-text">Entre em contato conosco e solicite um orçamento</p>
-    <a href="templates/budget/budget_request.html" class="btn btn-primary btn-large crane-trigger">Solicitar Orçamento</a>
+    <a href="{% url 'solicitar_orcamento' %}" class="btn btn-primary btn-large crane-trigger">
+Solicitar Orçamento
+</a>
   </div>
 </section>
 
